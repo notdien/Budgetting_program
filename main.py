@@ -357,6 +357,3 @@
 #             print("Error, not a choice".upper())
 #     action = input("Do you want to do another action(Y/N): ").upper()
 # total()
-
-# refracting code in a Object-Orientated style
-# class Account():
