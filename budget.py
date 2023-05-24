@@ -8,6 +8,14 @@ class Account():
         self.wants = wants
         self.savings = savings
 
+    # method to format the file - call it once to initalize the file's format
+    def file(self):
+        file_opener = open("budget.text", "w")
+        file_opener.write('%-15s %15s %15s %15s\n' %
+                          ("Reason:", "Needs:", "Wants:", "Savings:"))
+        file_opener.close()
+        print("Successfully wrote the new file format!")
+
     # methods to add paychecks
 
     # method for the paycheck of the first month
@@ -96,6 +104,7 @@ class Account():
 
 # defining a new user account
 diens_account = Account(100, 50, 300)
+# diens_account.file()
 print(f"Initial amount of the account - {diens_account}")
 diens_account.add_needs(100)
 print(diens_account)
