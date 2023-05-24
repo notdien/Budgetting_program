@@ -17,15 +17,36 @@ class Account():
 
         print(f"Incoming amount is: ${amount}")
 
+        # current bills - can be changed as new ones are added
         car_insurance = 160.00
         roth = 20.00
         music = 5.46
         gym = 10.51
         icloud = 1.00
 
+        # summing up all the bills for easy subtracting
+        bills = car_insurance + roth + music + gym + icloud
+
+        # current split is 50/30/20 - can be scaled however needed
         needs_p = 0.50
         wants_p = 0.30
         savings_p = 0.20
+
+        # distributing the split with the income amount
+        needs = amount * needs_p
+        wants = amount * wants_p
+        savings = amount * savings_p
+
+        # subtract the bills and the stuff we need to pay for
+        needs_total = needs - bills
+        self.needs += needs_total
+        self.needs = round(self.needs, 2)
+
+        self.wants += wants
+        self.wants = round(self.wants, 2)
+
+        self.savings += savings
+        self.savings = round(self.savings, 2)
 
     # method for the second paycheck of the month
     # this paychecks takes care of savings
@@ -68,7 +89,7 @@ class Account():
     def sub_savings(self, amount):
         self.savings -= amount
 
-    # method to provide information
+    # method to provide information / print information
     def __repr__(self):
         return f"Balance for account:\nNeeds: ${self.needs}, Wants: ${self.wants}, Savings: ${self.savings}"
 
@@ -79,4 +100,6 @@ print(f"Initial amount of the account - {diens_account}")
 diens_account.add_needs(100)
 print(diens_account)
 diens_account.sub_savings(50)
+print(diens_account)
+diens_account.first_paycheck(567.11)
 print(diens_account)
