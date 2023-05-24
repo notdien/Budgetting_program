@@ -1,6 +1,6 @@
-# automating my income split
+# # automating my income split
 
-# option 1 - display how much money I have
+# # option 1 - display how much money I have
 # def display():
 #     # Commenting this out but this is used to rewrite the file if needed!!!
 #     # file_opener = open("records.txt", "w")
@@ -21,16 +21,19 @@
 
 #     if sub_choice == 1:
 #         print("1) SUBTRACTING MONEY FROM NEEDS...")
-#         sub_money = float(input("How much do you want to subtract from NEEDS: "))
+#         sub_money = float(
+#             input("How much do you want to subtract from NEEDS: "))
 #         # stripping because for some reason if there is space in the reason, it will not do the math
-#         sub_reason = input("What is the reason to subtract money: ").upper().replace(" ", "")
+#         sub_reason = input(
+#             "What is the reason to subtract money: ").upper().replace(" ", "")
 
 #         # makes sure the amount becomes negative
 #         sub_money = -sub_money
 
 #         # appends to file
 #         file_opener = open("records.txt", "a")
-#         file_opener.write('%-15s %15s %15s %15s\n' % (sub_reason, sub_money, 0, 0))
+#         file_opener.write('%-15s %15s %15s %15s\n' %
+#                           (sub_reason, sub_money, 0, 0))
 #         file_opener.close()
 
 #         # print out to make sure it is correct
@@ -42,15 +45,18 @@
 
 #     elif sub_choice == 2:
 #         print("1) SUBTRACTING MONEY FROM WANTS...")
-#         sub_money = float(input("How much do you want to subtract from WANTS: "))
-#         sub_reason = input("What is the reason to subtract money: ").upper().replace(" ", "")
+#         sub_money = float(
+#             input("How much do you want to subtract from WANTS: "))
+#         sub_reason = input(
+#             "What is the reason to subtract money: ").upper().replace(" ", "")
 
 #         # makes sure the amount becomes negative
 #         sub_money = -sub_money
 
 #         # appends to file
 #         file_opener = open("records.txt", "a")
-#         file_opener.write('%-15s %15s %15s %15s\n' % (sub_reason, 0, sub_money, 0))
+#         file_opener.write('%-15s %15s %15s %15s\n' %
+#                           (sub_reason, 0, sub_money, 0))
 #         file_opener.close()
 
 #         # print out to make sure it is correct
@@ -62,15 +68,18 @@
 
 #     elif sub_choice == 3:
 #         print("1) SUBTRACTING MONEY FROM SAVINGS...")
-#         sub_money = float(input("How much do you want to subtract from SAVINGS: "))
-#         sub_reason = input("What is the reason to subtract money: ").upper().replace(" ", "")
+#         sub_money = float(
+#             input("How much do you want to subtract from SAVINGS: "))
+#         sub_reason = input(
+#             "What is the reason to subtract money: ").upper().replace(" ", "")
 
 #         # makes sure the amount becomes negative
 #         sub_money = -sub_money
 
 #         # appends to file
 #         file_opener = open("records.txt", "a")
-#         file_opener.write('%-15s %15s %15s %15s\n' % (sub_reason, 0, 0, sub_money))
+#         file_opener.write('%-15s %15s %15s %15s\n' %
+#                           (sub_reason, 0, 0, sub_money))
 #         file_opener.close()
 
 #         # print out to make sure it is correct
@@ -92,11 +101,13 @@
 #         print("1 - NEEDS SELECTED")
 #         # gets how much we are going to add for needs
 #         add_money = float(input("How much money do you want to add to needs:"))
-#         add_reason = input("What is the reason to add money:").upper().replace(" ", "")
+#         add_reason = input(
+#             "What is the reason to add money:").upper().replace(" ", "")
 
 #         # appends to file
 #         file_opener = open("records.txt", "a")
-#         file_opener.write('%-15s %15s %15s %15s\n' % (add_reason, add_money, 0, 0))
+#         file_opener.write('%-15s %15s %15s %15s\n' %
+#                           (add_reason, add_money, 0, 0))
 #         file_opener.close()
 
 #         # print out to make sure it is correct
@@ -110,11 +121,13 @@
 #         print("2 - WANTS SELECTED")
 #         # gets how much we are going to add for wants
 #         add_money = float(input("How much money do you want to add to WANTS:"))
-#         add_reason = input("What is the reason to add money:").upper().replace(" ", "")
+#         add_reason = input(
+#             "What is the reason to add money:").upper().replace(" ", "")
 
 #         # appends to file
 #         file_opener = open("records.txt", "a")
-#         file_opener.write('%-15s %15s %15s %15s\n' % (add_reason, 0, add_money, 0))
+#         file_opener.write('%-15s %15s %15s %15s\n' %
+#                           (add_reason, 0, add_money, 0))
 #         file_opener.close()
 
 #         # print out to make sure it is correct
@@ -127,12 +140,15 @@
 #     elif add_choice == 3:
 #         print("3 - SAVINGS SELECTED")
 #         # gets how much we are going to add for savings
-#         add_money = float(input("How much money do you want to add to SAVINGS:"))
-#         add_reason = input("What is the reason to add money:").upper().replace(" ", "")
+#         add_money = float(
+#             input("How much money do you want to add to SAVINGS:"))
+#         add_reason = input(
+#             "What is the reason to add money:").upper().replace(" ", "")
 
 #         # appends to file
 #         file_opener = open("records.txt", "a")
-#         file_opener.write('%-15s %15s %15s %15s\n' % (add_reason, 0, 0, add_money))
+#         file_opener.write('%-15s %15s %15s %15s\n' %
+#                           (add_reason, 0, 0, add_money))
 #         file_opener.close()
 
 #         # print out to make sure it is correct
@@ -170,7 +186,8 @@
 #         print("Not a choice!")
 #         print("Cycle 1 = Car Insurance, roth, music, gym, and Icloud - Enter 1.")
 #         print("Cycle 2 = Water and wifi - Enter 2.")
-#         needs_cycle = int(input("Which cycle of bills Am I paying for(1 or 2): "))
+#         needs_cycle = int(
+#             input("Which cycle of bills Am I paying for(1 or 2): "))
 #     else:
 #         if needs_cycle == 1:
 #             print("Cycle 1...")
@@ -322,7 +339,8 @@
 #             except ValueError:
 #                 pass
 #     print("-------------------------------------------------------------------")
-#     print('%-15s %15s %15s %15s' % ("Total:", round(total_needs, 2), round(total_wants, 2), round(total_savings, 2)))
+#     print('%-15s %15s %15s %15s' % ("Total:", round(total_needs, 2),
+#           round(total_wants, 2), round(total_savings, 2)))
 
 
 # action = "Y"

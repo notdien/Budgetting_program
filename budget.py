@@ -16,6 +16,12 @@ class Account():
         file_opener.close()
         print("Successfully wrote the new file format!")
 
+    # method to read the files
+    def file_read(self):
+        with open("budget.text", 'r') as text:
+            for line in text:
+                print(line, end='')
+
     # methods to add paychecks
 
     # method for the paycheck of the first month
@@ -103,12 +109,5 @@ class Account():
 
 
 # defining a new user account
-diens_account = Account(100, 50, 300)
-# diens_account.file()
-print(f"Initial amount of the account - {diens_account}")
-diens_account.add_needs(100)
-print(diens_account)
-diens_account.sub_savings(50)
-print(diens_account)
-diens_account.first_paycheck(567.11)
+diens_account = Account(489.1, 177.35, 9863.22)
 print(diens_account)
