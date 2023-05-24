@@ -8,4 +8,4 @@ Currently the program is written in a Structured programming style, however, I a
 
 # Original vs New
 
-The original structured budgetting program is named 'main.py', while the restructured OOP program is named 'budget.py'.
+The original structured budgetting program is named 'main.py' with the supporting file of 'records.txt', while the restructured OOP program is named 'budget.py' with supporting file of 'budget.txt'.
