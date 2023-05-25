@@ -110,4 +110,31 @@ class Account():
 
 # defining a new user account
 diens_account = Account(489.1, 177.35, 9863.22)
-print(diens_account)
+action = "Y"
+while action == "Y":
+    print("\n Welcome to the budgetting program!")
+    print("\n1) Display balance.")
+    print("\n2) Incoming money that needs to be distributed.")
+    print("\n3) Subtract money from balance.")
+    print("\n4) Add money to balance.")
+    user = int(input("\nPlease make a selection: "))
+    while user < 1 or user > 4:
+        print("That is not a option, please pick a correct option!")
+        user = int(input("\nMake a selection: "))
+    else:
+        print(f"Choice selected: {user}")
+        if user == 1:
+            print("Displaying balance...")
+            print(diens_account)
+        elif user == 2:
+            print("Incoming money...")
+            # insert function here
+        elif user == 3:
+            print("Subtracting money...")
+            # insert function here
+        elif user == 4:
+            print("Adding money...")
+            # insert function here
+        else:
+            print("Error, not a choice...")
+    action = input("Do you have any furthur transactons(Y/N): ").upper()
