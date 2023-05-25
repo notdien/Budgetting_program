@@ -10,7 +10,7 @@ class Account():
 
     # method to format the file - call it once to initalize the file's format
     def file(self):
-        file_opener = open("budget.text", "w")
+        file_opener = open("budget.txt", "w")
         file_opener.write('%-15s %15s %15s %15s\n' %
                           ("Reason:", "Needs:", "Wants:", "Savings:"))
         file_opener.close()
@@ -18,7 +18,7 @@ class Account():
 
     # method to read the files
     def file_read(self):
-        with open("budget.text", 'r') as text:
+        with open("budget.txt", 'r') as text:
             for line in text:
                 print(line, end='')
 
@@ -110,6 +110,7 @@ class Account():
 
 # defining a new user account
 diens_account = Account(489.1, 177.35, 9863.22)
+diens_account.file()
 action = "Y"
 while action == "Y":
     print("\n Welcome to the budgetting program!")
